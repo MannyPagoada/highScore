@@ -37,7 +37,7 @@ public class main{
             switch(choice){
                 //add a student and a score
                 case 0:
-
+                clear();
                 System.out.println("What is the name of the student?");
                 tempString=scanner.nextLine();
                 tempString=scanner.nextLine();
@@ -47,7 +47,7 @@ public class main{
                 tempScore=scanner.nextInt();
 
                 list.append(tempString, tempScore);
-
+                clear();
                 break;
 
                 //display the highscore
@@ -67,7 +67,8 @@ public class main{
                 //loops :/
                 default: 
                 clear();
-                System.out.println("Invalid option/n");
+                System.out.println("Invalid option");
+                System.out.println("");
                 break;
             }
 
