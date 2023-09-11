@@ -9,6 +9,11 @@ public class main{
         System.out.println("2. End program");
     }
 
+    public static void clear(){
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+
     public static void main(String[] args){
         /* So with high score you are given a prompt.
          * You need to enter the number os students and each students name and score. 
@@ -35,10 +40,15 @@ public class main{
 
                 System.out.println("What is the name of the student?");
                 tempString=scanner.nextLine();
+                tempString=scanner.nextLine();
+            
+
                 System.out.println("What is the score of the student?");
                 tempScore=scanner.nextInt();
 
                 list.append(tempString, tempScore);
+
+                break;
 
                 //display the highscore
                 case 1:
@@ -46,19 +56,26 @@ public class main{
                 list.sort();
                 list.display();
 
+                break;
+
                 //end program
                 case 2:
                     isDone=true;
 
+                break;
+
                 //loops :/
                 default: 
+                clear();
+                System.out.println("Invalid option/n");
+                break;
             }
 
 
 
 
 
-        }while (isDone=false);
+        }while (isDone==false);
 
 
 
