@@ -27,8 +27,32 @@ public class main{
         //start the loop
         do{
             menu();
-            choice=scanner.nexInt();
+            choice=scanner.nextInt();
 
+            switch(choice){
+                //add a student and a score
+                case 0:
+
+                System.out.println("What is the name of the student?");
+                tempString=scanner.nextLine();
+                System.out.println("What is the score of the student?");
+                tempScore=scanner.nextInt();
+
+                list.append(tempString, tempScore);
+
+                //display the highscore
+                case 1:
+
+                list.sort();
+                list.display();
+
+                //end program
+                case 2:
+                    isDone=true;
+
+                //loops :/
+                default: 
+            }
 
 
 
